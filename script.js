@@ -4,6 +4,8 @@ const buttonCir =document.querySelector("#btn-circles");
 const body = document.querySelector("body");
 const mainTitle = document.querySelector("#main-title");
 
+const randomBgBtn = document.querySelector('.randomBgBtn'); 
+
 
 console.log({buttonBc,buttonCir,buttonTitle})
 
@@ -23,3 +25,11 @@ buttonCir.addEventListener("click",()=>{
     circle.style.border = "1px solid black";
     body.append(circle);
 })
+
+
+randomBgBtn.addEventListener('click', () => {
+    let red = Math.floor(Math.random() * 256); 
+    let green = Math.floor(Math.random() * 256); 
+    let blue = Math.floor(Math.random() * 256); 
+    body.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`; 
+}); 
